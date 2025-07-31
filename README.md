@@ -39,14 +39,39 @@ YouTubeプレイリストと楽曲リストの高精度マッチングシステ�
 ```bash
 # リポジトリをクローン
 git clone <repository-url>
-cd test-fav
+cd YouTube Playlist Matcher
+
+# 仮想環境を作成
+python -m venv .venv
 
 # 仮想環境をアクティベート（Windows）
 .venv\Scripts\activate
 
+# 仮想環境をアクティベート（macOS/Linux）
+source .venv/bin/activate
+
 # 必要なパッケージをインストール
 pip install pandas yt-dlp requests beautifulsoup4
 ```
+
+### 必要なデータファイルの準備
+
+クローン後、以下のファイルを用意してください：
+
+1. **楽曲リスト**: `list.csv`
+    ```csv
+    .曲名,.作曲者
+    楽曲名1,アーティスト1
+    楽曲名2,アーティスト2
+    ...
+    ```
+
+2. **YouTubeプレイリストURL**: `url`
+    ```
+    https://music.youtube.com/playlist?list=YOUR_PLAYLIST_ID
+    ```
+
+    ```
 
 ### 実行手順
 
@@ -71,7 +96,7 @@ pip install pandas yt-dlp requests beautifulsoup4
 ## 📁 ファイル構成
 
 ```text
-test-fav/
+YouTube Playlist Matcher/
 ├── 📊 データファイル (Git除外)
 │   ├── list.csv                      # 元の楽曲リスト
 │   ├── youtube_playlist.csv          # YouTubeプレイリスト情報
