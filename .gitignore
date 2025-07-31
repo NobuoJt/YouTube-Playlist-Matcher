@@ -89,6 +89,7 @@ youtube_playlist.csv
 final_hybrid_matches.csv
 *.xlsx
 url
+playlist_info.json
 
 # Sensitive data (if any)
 config.ini
